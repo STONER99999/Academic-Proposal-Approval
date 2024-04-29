@@ -71,7 +71,10 @@ const Status = () => {
             </tr>
           </thead>
         ) : (
-          <p className=" duration-100 inline-block py-4 px-8  text-teal-800 rounded-lg text-lg font-style: italic  ">You have not submitted any proposal yet , Submit your first Proposal!</p>
+          <p className=" duration-100 inline-block py-4 px-8  text-teal-800 rounded-lg text-lg font-style: italic  ">
+            You have not submitted any proposal yet , Submit your first
+            Proposal!
+          </p>
         )}
 
         {Proposal?.map((proposal) => (
@@ -111,7 +114,8 @@ const Status = () => {
                 </td>
                 <td
                   className={`${
-                    proposal?.status == "approved"
+                    proposal?.status == "approved" ||
+                    proposal?.status === "done"
                       ? "bg-green-800"
                       : proposal?.status === "pending"
                       ? "bg-yellow-800"
